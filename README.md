@@ -93,7 +93,7 @@ In my daily use,
 1.  same as the *Server side*, checkout the code, and do the difinition **AS SAME AS** the server side
 2.  `cp apps/proxy_client/priv/client.conf.sample apps/proxy_client/priv/client.conf`
 
-3   `modify the script: modify the server_ip,server_port to the seem like the server side`
+3.   modify the script: modify the server_ip,server_port to the seem like the server side
 
 4.  `./start_client.sh`
 
