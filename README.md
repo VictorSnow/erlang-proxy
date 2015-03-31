@@ -69,25 +69,33 @@ In my daily use,
 5.  the circle done.
 
 
+## Compile
+*  ./rebar compile
+
+
 ## Usage
 
 ### Server side
 
 1.  `git clone https://github.com/yueyoum/make-proxy.git` or directly download.
-2.  `cp src/config.hrl.example src/config.hrl`
+2.  `modify apps/proxy_server/priv/serve.hrl`
 
-    You need to define the `REMOTEIP` and `REMOTEPORT`.
+    You need to define the `listen_ip` and `listen_port`.
 
-    `REMOTEPORT` is which port proxy_server will listen on.
+    `listen_port` is which port proxy_server will listen on.
+    `defult: 0.0.0.0:8888 `
 
-4.  `./start_server.sh` or `./start_server.sh -d` will run the server in backend.
+3.  `./start_server.sh` or `./start_server.sh -d` will run the server in backend.
 
 
 ### Local side
 
 1.  same as the *Server side*, checkout the code, and do the difinition **AS SAME AS** the server side
+2.  `cp apps/proxy_client/priv/client.conf.sample apps/proxy_client/priv/client.conf`
 
-2.  `./start_client.sh`
+3   `modify the script: modify the server_ip,server_port to the seem like the server side`
+
+4.  `./start_client.sh`
 
 
 Now, you can set your apps (e.g. Browser) Using socks5 proxy.
