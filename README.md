@@ -78,7 +78,7 @@ In my daily use,
 ### Server side
 
 1.  `git clone https://github.com/yueyoum/make-proxy.git` or directly download.
-2.  `modify apps/proxy_server/priv/serve.hrl`
+2.  `modify apps/proxy_server/priv/server.hrl`
 
     You need to define the `listen_ip` and `listen_port`.
 
